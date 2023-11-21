@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.RECIDER" parent="Theme.Material3.DayNight">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/background_light_pink</item>
+    </style>
+
+    <style name="NoActionBarTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/button_color_rounded</item>
+    </style>
+
+    <style name="Theme.RECIDER" parent="Base.Theme.RECIDER" />
+</resources>
