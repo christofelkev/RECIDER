@@ -3,4 +3,46 @@
     <string name="siapa_saja_bisa_memasak">#SIAPA SAJA BISA MEMASAK</string>
     <string name="get_started">GET STARTED</string>
     <string name="mulailah_memasak_hari_ini">Mulailah memasak hari ini</string>
+
+    <string name="rawon_recipe">
+        Bahan-bahan:\n\n
+        - 1 kg daging sapi\n
+        - 5 lembar daun jeruk purut\n
+        - 3 lembar daun salam\n
+        - 2 buah daun bawang, iris dengan panjang 1 cm\n
+        - 2 batang serai, memarkan\n
+        - 2 cm lengkuas, memarkan\n
+        - Merica bubuk, secukupnya\n
+        - 2 liter air bersih\n
+        - Gula jawa secukupnya\n
+        - Garam, secukupnya\n\n
+        Bumbu Halus:\n\n
+        - 10 siung bawang merah\n
+        - 6 siung bawang putih\n
+        - 5 butir kemiri\n
+        - 5 buah keluak\n
+        - 2 cm jahe\n
+        - 1 cm kunyit\n
+        - 1 cm kencur\n
+        - ½ sdt ketumbar bubuk\n
+        - ½ sdt asam jawa\n
+        - ½ sdt jintan\n
+        - ½ sdt terasi, optional\n\n
+        Bahan Pelengkap:\n\n
+        - Kerupuk udang\n
+        - Telur asin\n
+        - Sambal teras\n\n
+        Cara membuat:\n\n
+        1. Siapkan daging sapi, iris dengan ukuran sebesar daging untuk sate. Cuci bersih lalu tiriskan.\n
+        2. Haluskan semua bumbu halus bisa gunakan blender atau ulekan dengan tingkat kehalusan sesuai selera.\n
+        3. Dalam panci, panaskan 2 liter air kemudian tunggu hingga mendidih.\n
+        4. Rebus daging sapi di atas api sedang untuk mendapatkan hasil kaldu yang jernih. Setelah itu, tunggu hingga daging melunak.\n
+        5. Tumis bumbu yang telah dihaluskan dengan api sedang. Aduk hingga aroma tumisan bumbu tercium. Pastikan terus mengaduk agar tumisan tidak gosong.\n
+        6. Tambahkan pula batang serai, lengkuas, daun jeruk purut, dan daun salam. Aduk kembali sampai dedaunan menjadi layu dan berwarna pucat.\n
+        7. Seusai tumisan bumbu harum, masukkan bumbu ke dalam panci rebusan daging. Lalu aduk sampai bumbu tercampur dengan daging dan kaldunya.\n
+        8. Selanjutnya, masukkan garam, gula jawa, serta lada bubuk, kemudian cicipi rasanya.\n
+        9. Masak terus dengan api sedang dan tunggu sampai daging benar-benar empuk dan bumbu meresap sempurna ke dalam daging.\n
+        10. Sebelum diangkat, tambahkan irisan daun bawang. Tunggu sekitar 5-8 menit.\n
+        11. Matikan api dan sajikan rawon bersama dengan bahan-bahan pelengkap untuk mendapatkan kenikmatan yang maksimal.
+    </string>
 </resources>

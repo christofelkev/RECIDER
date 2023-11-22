@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.DetailRecipeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_recipe_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/rendang" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/rounded_rectangle_detail" />
+
+            <TextView
+                android:id="@+id/tv_recipe_title_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:text="Rendang"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_about_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_recipe_title_detail"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:textSize="30sp"
+                android:text="Tentang Resep" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_about_recipe"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="17dp"
+                android:layout_marginTop="17dp"
+                android:text="@string/rawon_recipe"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

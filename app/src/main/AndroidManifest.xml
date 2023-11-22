@@ -13,7 +13,10 @@
         android:theme="@style/Theme.RECIDER"
         tools:targetApi="31">
         <activity
-            android:name=".ui.SearchActivity"
+            android:name=".ui.DetailRecipeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SearchListRecipeActivity"
             android:exported="false" />
         <activity
             android:name=".ui.MainActivity"
