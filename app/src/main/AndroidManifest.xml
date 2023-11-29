@@ -16,10 +16,10 @@
             android:name=".ui.DetailRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.SearchListRecipeActivity"
+            android:name=".ui.list.SearchListRecipeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:theme="@style/NoActionBarTheme">
             <intent-filter>

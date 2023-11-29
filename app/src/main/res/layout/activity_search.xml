@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_light_pink"
-    tools:context=".ui.SearchListRecipeActivity">
+    tools:context=".ui.list.SearchListRecipeActivity">
 
     <TextView
         android:id="@+id/textview"
@@ -33,9 +33,12 @@
         app:layout_constraintTop_toBottomOf="@id/textview">
 
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:boxStrokeWidth="2dp"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/black">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ed_query"
@@ -44,7 +47,7 @@
                 android:hint="Cari Resep"
                 android:inputType="text"
                 android:maxLines="1"
-                android:textColorHint="@color/white" />
+                android:textColorHint="@color/black" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

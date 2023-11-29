@@ -1,9 +1,10 @@
-package com.capstone.recider.ui
+package com.capstone.recider.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.capstone.recider.databinding.ActivityMainBinding
+import com.capstone.recider.ui.list.SearchListRecipeActivity
 
 class MainActivity : AppCompatActivity() {
 
