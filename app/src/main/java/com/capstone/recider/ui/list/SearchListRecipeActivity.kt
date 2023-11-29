@@ -1,5 +1,6 @@
 package com.capstone.recider.ui.list
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.KeyEvent
@@ -7,7 +8,9 @@ import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import com.capstone.recider.data.dummyModel.Recipe
 import com.capstone.recider.databinding.ActivitySearchBinding
+import com.capstone.recider.ui.detail.DetailRecipeActivity
 
 class SearchListRecipeActivity : AppCompatActivity() {
 
@@ -22,6 +25,16 @@ class SearchListRecipeActivity : AppCompatActivity() {
 
         adapter = ListRecipeAdapter()
         adapter.notifyDataSetChanged()
+
+        adapter.setOnItemClickCallback(object : ListRecipeAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Recipe) {
+                Intent(this@SearchListRecipeActivity, DetailRecipeActivity::class.java).also {
+                    it.putExtra(DetailRecipeActivity.EXTRA_RECIPE_ID, data.id)
+                    startActivity(it)
+                }
+            }
+
+        })
         viewModel = ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()

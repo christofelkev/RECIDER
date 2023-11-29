@@ -12,6 +12,12 @@ class ListRecipeAdapter : RecyclerView.Adapter<ListRecipeAdapter.RecipeViewHolde
 
     private val list = ArrayList<Recipe>()
 
+    private var onItemClickCallback : OnItemClickCallback? = null
+
+    fun setOnItemClickCallback (onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
     fun setList(recipes: List<Recipe>) {
         list.clear()
         list.addAll(recipes)
@@ -21,6 +27,9 @@ class ListRecipeAdapter : RecyclerView.Adapter<ListRecipeAdapter.RecipeViewHolde
     inner class RecipeViewHolder(val binding: ItemRecipeBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(recipe: Recipe) {
+            binding.root.setOnClickListener {
+                onItemClickCallback?.onItemClicked(recipe)
+            }
             binding.apply {
                 Glide.with(itemView)
                     .load(recipe.photo)
@@ -41,5 +50,9 @@ class ListRecipeAdapter : RecyclerView.Adapter<ListRecipeAdapter.RecipeViewHolde
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         holder.bind(list[position])
+    }
+
+    interface OnItemClickCallback{
+        fun onItemClicked(data : Recipe)
     }
 }
