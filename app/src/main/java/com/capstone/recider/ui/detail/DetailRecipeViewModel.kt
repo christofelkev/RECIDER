@@ -1,5 +1,6 @@
 package com.capstone.recider.ui.detail
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -29,13 +30,16 @@ class DetailRecipeViewModel: ViewModel() {
                     val recipeDetailResponse: RecipeDetailResponse? = response.body()
                     val recipeDetail: RecipeDetail? = recipeDetailResponse?.data
                     _recipeDetail.value = recipeDetail
+                    Log.d("success", "Success")
                 } else {
                     // handle unsuccessful response
+                    Log.d("unsuccessful", "Unsuccessful")
                 }
             }
 
             override fun onFailure(call: Call<RecipeDetailResponse>, t: Throwable) {
                 // handle failure
+                Log.d("fail", "Failure")
             }
 
         })
