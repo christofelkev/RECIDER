@@ -33,7 +33,7 @@ class DetailRecipeActivity : AppCompatActivity() {
         viewModel.recipeDetail.observe(this, Observer { recipeDetail ->
             // Update tampilan detail menggunakan data resep
             binding.tvRecipeTitleDetail.text = recipeDetail.recipe
-            binding.tvAboutRecipe.text = recipeDetail.ingredient.toString()
+            binding.tvAboutRecipe.text = recipeDetail.ingredient.joinToString("\n")
             // Sesuaikan dengan komponen UI lainnya
             Glide.with(this@DetailRecipeActivity)
                 .load(recipeDetail.image)

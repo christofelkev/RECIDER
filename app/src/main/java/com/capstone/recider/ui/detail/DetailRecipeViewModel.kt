@@ -33,7 +33,7 @@ class DetailRecipeViewModel: ViewModel() {
                     Log.d("success", "Success")
                 } else {
                     // handle unsuccessful response
-                    Log.d("unsuccessful", "Unsuccessful")
+                    Log.d("unsuccessful", response.toString())
                 }
             }
 

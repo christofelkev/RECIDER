@@ -10,6 +10,6 @@ interface ApiService {
     @GET("api/searchRecipe/{query}") // Update the search endpoint with the correct path
     fun searchRecipes(@Path("query") query: String): Call<SearchRecipeResponse>
 
-    @GET("api/recipes/{recipeId}") // Update the recipe detail endpoint with the correct path
+    @GET("api/recipe/{recipeId}") // Update the recipe detail endpoint with the correct path
     fun getRecipeDetail(@Path("recipeId") recipeId: Long): Call<RecipeDetailResponse>
 }
