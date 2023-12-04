@@ -5,7 +5,6 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.capstone.recider.data.api.ApiConfig
 import com.capstone.recider.data.api.ApiService
-import com.capstone.recider.data.model.Recipe
 import com.capstone.recider.data.model.RecipeDetail
 import com.capstone.recider.data.model.RecipeDetailResponse
 import retrofit2.Call
