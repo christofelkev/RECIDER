@@ -1,12 +1,11 @@
 package com.capstone.recider.ui.detail
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import com.capstone.recider.R
 import com.capstone.recider.databinding.ActivityDetailRecipeBinding
 
 class DetailRecipeActivity : AppCompatActivity() {
@@ -25,19 +24,19 @@ class DetailRecipeActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this)[DetailRecipeViewModel::class.java]
 
-        val recipeId = intent.getIntExtra(EXTRA_RECIPE_ID, -1)
-        if (recipeId != -1) {
+        val recipeId = intent.getLongExtra(EXTRA_RECIPE_ID, -1)
+        if (recipeId != -1L) {
             viewModel.setRecipeDetail(recipeId)
         }
 
         // Amati LiveData untuk memperbarui tampilan saat data resep berubah
         viewModel.recipeDetail.observe(this, Observer { recipeDetail ->
             // Update tampilan detail menggunakan data resep
-            binding.tvRecipeTitleDetail.text = recipeDetail.name
-            binding.tvAboutRecipe.text = getString(recipeDetail.description)
+            binding.tvRecipeTitleDetail.text = recipeDetail.recipe
+            binding.tvAboutRecipe.text = recipeDetail.ingredient.toString()
             // Sesuaikan dengan komponen UI lainnya
             Glide.with(this@DetailRecipeActivity)
-                .load(recipeDetail.photo)
+                .load(recipeDetail.image)
                 .transition(DrawableTransitionOptions.withCrossFade())
                 .centerCrop()
                 .into(binding.ivRecipeDetail)
