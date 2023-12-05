@@ -33,8 +33,18 @@ class DetailRecipeActivity : AppCompatActivity() {
         viewModel.recipeDetail.observe(this, Observer { recipeDetail ->
             // Update tampilan detail menggunakan data resep
             binding.tvRecipeTitleDetail.text = recipeDetail.recipe
-            binding.tvAboutRecipe.text = recipeDetail.ingredient.joinToString("\n")
-            binding.tvAboutRecipeHow.text = recipeDetail.step.joinToString("\n\n")
+
+            //binding.tvAboutRecipe.text = recipeDetail.ingredient.joinToString("\n")
+            // Menggunakan bullet point untuk ingredient
+            val ingredientText = recipeDetail.ingredient.joinToString("\n") { "- $it" }
+            binding.tvAboutRecipe.text = ingredientText
+
+            //binding.tvAboutRecipeHow.text = recipeDetail.step.joinToString("\n\n")
+            // Menggunakan angka untuk langkah-langkah
+            val stepsText = recipeDetail.step.withIndex()
+                .joinToString("\n\n") { (index, step) -> "${index + 1}. $step" }
+            binding.tvAboutRecipeHow.text = stepsText
+
             // Sesuaikan dengan komponen UI lainnya
             Glide.with(this@DetailRecipeActivity)
                 .load(recipeDetail.image)
