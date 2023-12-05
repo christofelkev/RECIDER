@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -26,7 +27,6 @@ class SearchListRecipeActivity : AppCompatActivity() {
         adapter = ListRecipeAdapter()
 
         viewModel = ViewModelProvider(this)[SearchListRecipeViewModel::class.java]
-        //adapter.notifyDataSetChanged()
 
         adapter.setOnItemClickCallback(object : ListRecipeAdapter.OnItemClickCallback {
             override fun onItemClicked(data: Recipe) {
@@ -38,16 +38,6 @@ class SearchListRecipeActivity : AppCompatActivity() {
 
 
         })
-        //viewModel = ViewModelProvider(
-        //this,
-        //ViewModelProvider.NewInstanceFactory()
-        //)[SearchListRecipeViewModel::class.java]
-
-        //viewModel.listRecipe.observe(this, Observer { recipes ->
-        // Update adapter with the new list of recipes
-        // adapter.setList(recipes)
-        // adapter.notifyDataSetChanged()
-        //})
 
         binding.apply {
             rvRecipe.layoutManager = GridLayoutManager(this@SearchListRecipeActivity, 2)
@@ -67,19 +57,16 @@ class SearchListRecipeActivity : AppCompatActivity() {
             }
         }
 
-        /*viewModel.getSearchRecipes().observe(this) {
-            if (it != null) {
-                adapter.setList(it)
-                showLoading(false)
-            }
-        }*/
 
         viewModel.getSearchRecipes().observe(this, Observer { recipes ->
             if (recipes != null) {
-                adapter.setList(recipes)
-                showLoading(false)
+                if (recipes.isEmpty()) {
+                    showNoResult()
+                } else {
+                    adapter.setList(recipes)
+                    showLoading(false)
+                }
             }
-
         })
     }
 
@@ -95,5 +82,10 @@ class SearchListRecipeActivity : AppCompatActivity() {
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+    }
+
+    private fun showNoResult() {
+        Toast.makeText(this, "Resep Tidak Ditemukan", Toast.LENGTH_SHORT).show()
+        showLoading(false)
     }
 }

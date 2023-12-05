@@ -1,5 +1,7 @@
 package com.capstone.recider.ui.list
 
+import android.util.Log
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -27,9 +29,23 @@ class SearchListRecipeViewModel : ViewModel() {
                     val searchRecipeResponse: SearchRecipeResponse? = response.body()
                     val recipes: List<com.capstone.recider.data.model.Recipe>? =
                         searchRecipeResponse?.data
-                    _listRecipe.value = recipes ?: emptyList()
+
+                    if (recipes.isNullOrEmpty()) {
+                        //Handle no result scenario
+                        _listRecipe.value = emptyList()
+                    } else {
+                        _listRecipe.value = recipes
+                    }
+
                 } else {
                     // handle unsuccessful response
+                    if (response.code() == 404) {
+                        // Handle 404 status code (No results found)
+                        _listRecipe.value = emptyList()
+                    } else {
+                        Log.d("unsuccessful",response.toString())
+                    }
+
                 }
             }
 
