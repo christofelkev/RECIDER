@@ -34,6 +34,7 @@ class DetailRecipeActivity : AppCompatActivity() {
             // Update tampilan detail menggunakan data resep
             binding.tvRecipeTitleDetail.text = recipeDetail.recipe
             binding.tvAboutRecipe.text = recipeDetail.ingredient.joinToString("\n")
+            binding.tvAboutRecipeHow.text = recipeDetail.step.joinToString("\n\n")
             // Sesuaikan dengan komponen UI lainnya
             Glide.with(this@DetailRecipeActivity)
                 .load(recipeDetail.image)

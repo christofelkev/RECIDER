@@ -5,7 +5,6 @@
     <string name="mulailah_memasak_hari_ini">Mulailah memasak hari ini</string>
 
     <string name="rawon_recipe">
-        Bahan-bahan:\n\n
         - 1 kg daging sapi\n
         - 5 lembar daun jeruk purut\n
         - 3 lembar daun salam\n
@@ -32,7 +31,9 @@
         - Kerupuk udang\n
         - Telur asin\n
         - Sambal teras\n\n
-        Cara membuat:\n\n
+
+    </string>
+    <string name="cara_membuat">
         1. Siapkan daging sapi, iris dengan ukuran sebesar daging untuk sate. Cuci bersih lalu tiriskan.\n
         2. Haluskan semua bumbu halus bisa gunakan blender atau ulekan dengan tingkat kehalusan sesuai selera.\n
         3. Dalam panci, panaskan 2 liter air kemudian tunggu hingga mendidih.\n
