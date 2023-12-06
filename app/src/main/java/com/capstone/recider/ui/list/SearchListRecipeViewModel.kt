@@ -33,6 +33,7 @@ class SearchListRecipeViewModel : ViewModel() {
         )
         _categoriesRecipe.value = categoryList
 
+        _loadingState.value = true
         fetchAllRecipes()
     }
 
@@ -69,6 +70,7 @@ class SearchListRecipeViewModel : ViewModel() {
 
             override fun onFailure(call: Call<AllRecipesResponse>, t: Throwable) {
                 // handle failure
+                _loadingState.value = false
             }
         })
     }

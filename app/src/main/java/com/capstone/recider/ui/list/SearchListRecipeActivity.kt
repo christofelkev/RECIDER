@@ -94,6 +94,9 @@ class SearchListRecipeActivity : AppCompatActivity() {
                 }
             }
         })
+        viewModel.loadingState.observe(this, Observer { isLoading ->
+            showLoading(isLoading)
+        })
     }
 
 
@@ -109,6 +112,7 @@ class SearchListRecipeActivity : AppCompatActivity() {
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
+
 
     private fun showNoResult() {
         Toast.makeText(this, "Resep Tidak Ditemukan", Toast.LENGTH_SHORT).show()
