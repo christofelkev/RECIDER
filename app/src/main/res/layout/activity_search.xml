@@ -62,19 +62,33 @@
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_categories"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/rv_recipe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/framelayout"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_category" />
+
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_recipe"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/framelayout"
+        app:layout_constraintTop_toBottomOf="@+id/rv_categories"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/item_recipe"
-        app:spanCount="2">
-
+        app:spanCount="2"
+        tools:listitem="@layout/item_recipe">
 
 
     </androidx.recyclerview.widget.RecyclerView>
