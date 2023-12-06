@@ -9,6 +9,10 @@ data class SearchRecipeResponse(
     val status: String,
     val data: List<Recipe>
 )
+data class AllRecipesResponse(
+    val status: String,
+    val data: List<Recipe>
+)
 
 
 

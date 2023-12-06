@@ -1,5 +1,6 @@
 package com.capstone.recider.data.api
 
+import com.capstone.recider.data.model.AllRecipesResponse
 import com.capstone.recider.data.model.RecipeDetailResponse
 import com.capstone.recider.data.model.SearchRecipeResponse
 import retrofit2.Call
@@ -12,4 +13,8 @@ interface ApiService {
 
     @GET("api/recipe/{recipeId}") // Update the recipe detail endpoint with the correct path
     fun getRecipeDetail(@Path("recipeId") recipeId: Long): Call<RecipeDetailResponse>
+
+    @GET("api/allRecipes")
+    fun getAllRecipes(): Call<AllRecipesResponse>
+
 }
