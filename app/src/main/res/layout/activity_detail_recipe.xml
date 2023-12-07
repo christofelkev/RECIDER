@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_about_recipe_title"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="17dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="17dp"
                 tools:text="@string/rawon_recipe"
                 android:textSize="15sp" />
@@ -85,7 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_about_recipe_how_title"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="17dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="17dp"
                 tools:text="@string/cara_membuat"
                 android:textSize="15sp" />

@@ -142,6 +142,21 @@ class SearchListRecipeActivity : AppCompatActivity() {
                 // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Sapi")
             }
+            "Tempe" -> {
+                // Handle click for "Ayam"
+                // For example, perform a search for recipes related to "Ayam"
+                viewModel.setSearchRecipes("Tempe")
+            }
+            "Tahu" -> {
+                // Handle click for "Ayam"
+                // For example, perform a search for recipes related to "Ayam"
+                viewModel.setSearchRecipes("Tahu")
+            }
+            "Telur" -> {
+                // Handle click for "Ayam"
+                // For example, perform a search for recipes related to "Ayam"
+                viewModel.setSearchRecipes("Telur")
+            }
             // Add cases for other categories as needed
             else -> {
                 // Handle other categories

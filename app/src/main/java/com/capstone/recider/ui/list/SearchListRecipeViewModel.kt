@@ -29,7 +29,10 @@ class SearchListRecipeViewModel : ViewModel() {
         val categoryList = listOf(
             Category("Semua Resep"),
             Category("Ayam"),
-            Category("Sapi")
+            Category("Sapi"),
+            Category("Tempe"),
+            Category("Tahu"),
+            Category("Telur"),
         )
         _categoriesRecipe.value = categoryList
 
