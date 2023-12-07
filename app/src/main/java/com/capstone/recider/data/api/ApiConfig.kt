@@ -4,7 +4,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
-    private const val BASE_URL = "https://us-central1-test-firestore-696.cloudfunctions.net/app/"
+   // private const val BASE_URL = "https://us-central1-test-firestore-696.cloudfunctions.net/app/"
+    private const val BASE_URL = "https://ch2-ps391-recider.et.r.appspot.com"
 
     private var retrofit: Retrofit? = null
 
