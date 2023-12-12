@@ -1,6 +1,6 @@
 # Android Section
 
-This is the Mobile Development Section of this repo. Written here are information about what this Android Studio project needed and how it works conceptually.
+This is the Mobile Development Section of this [repo][https://github.com/alwirihad/recider-apps]. Written here are information about what this Android Studio project needed and how it works conceptually.
 
 ## Android Studio Project Overview
 
