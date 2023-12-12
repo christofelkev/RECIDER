@@ -20,7 +20,7 @@ This is the Mobile Development Section of this [repo](https://github.com/alwirih
 
 #### User Interaction:
 
-Users launch the Recider mobile application. The main screen allows users to enter ingredients they have. Users can trigger a search for recipes based on the provided ingredients.
+Users launch the Recider mobile application. The main screen allows users to enter recipe by title and the ingredients they have. Users can trigger a search for recipes based on the provided ingredients and title recipe
 
 #### ViewModel Interaction:
 
