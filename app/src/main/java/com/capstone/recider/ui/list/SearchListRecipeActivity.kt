@@ -14,6 +14,7 @@ import com.capstone.recider.data.model.Category
 import com.capstone.recider.data.model.Recipe
 import com.capstone.recider.databinding.ActivitySearchBinding
 import com.capstone.recider.ui.detail.DetailRecipeActivity
+import com.capstone.recider.ui.recommendation.RecommendationRecipeActivity
 
 class SearchListRecipeActivity : AppCompatActivity() {
 
@@ -58,6 +59,12 @@ class SearchListRecipeActivity : AppCompatActivity() {
 
             btnSearch.setOnClickListener {
                 searchRecipe()
+            }
+
+            tvIngredient.setOnClickListener {
+                val intent =
+                    Intent(this@SearchListRecipeActivity, RecommendationRecipeActivity::class.java)
+                startActivity(intent)
             }
 
             categoryAdapter.setOnCategoryItemClickListener(object :
@@ -142,16 +149,19 @@ class SearchListRecipeActivity : AppCompatActivity() {
                 // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Sapi")
             }
+
             "Tempe" -> {
                 // Handle click for "Ayam"
                 // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Tempe")
             }
+
             "Tahu" -> {
                 // Handle click for "Ayam"
                 // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Tahu")
             }
+
             "Telur" -> {
                 // Handle click for "Ayam"
                 // For example, perform a search for recipes related to "Ayam"

@@ -10,6 +10,8 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 
+data class RecommendationRequest(val ingredients : String)
+
 interface ApiService {
     @GET("api/searchRecipe/{query}") // Update the search endpoint with the correct path
     fun searchRecipes(@Path("query") query: String): Call<SearchRecipeResponse>
@@ -21,6 +23,6 @@ interface ApiService {
     fun getAllRecipes(): Call<AllRecipesResponse>
 
     @POST("/recommend")
-    fun getRecommendations(@Body requestBody: Map<String, String>): Call<RecommendationResponse>
+    fun getRecommendations(@Body request: RecommendationRequest): Call<RecommendationResponse>
 
 }

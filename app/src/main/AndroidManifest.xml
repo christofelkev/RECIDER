@@ -15,9 +15,12 @@
         android:theme="@style/Theme.RECIDER"
         tools:targetApi="31">
         <activity
+            android:name=".ui.recommendation.RecommendationRecipeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.main.MainActivity"
             android:exported="false"
-            android:theme="@style/NoActionBarTheme"/>
+            android:theme="@style/NoActionBarTheme" />
         <activity
             android:name=".ui.detail.DetailRecipeActivity"
             android:exported="false" />
