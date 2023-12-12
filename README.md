@@ -32,7 +32,7 @@ The ApiService interface defines the API endpoints, including the one for recipe
 
 #### Backend Processing:
 
-The backend server processes the request and returns a response containing recipe recommendations. The response is modeled by the RecommendationResponse class.
+The backend server processes the request and returns a response containing recipe recommendations. The response is modeled by the RecommendationResponse class, RecipeResponse, And DetailResponse Class.
 
 #### ViewModel Update:
 
