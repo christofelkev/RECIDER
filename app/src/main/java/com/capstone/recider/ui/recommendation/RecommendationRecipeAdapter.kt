@@ -23,7 +23,7 @@ class RecommendationRecipeAdapter :
             binding.apply {
                 tvRecommendationTitle.text = recommendation.Title
 
-                // Mengganti "--" dengan "\n-" dan menghilangkan tanda minus ("-") di akhir
+                // Mengganti "--" dengan "\n-" dan menghilangkan tanda ("-") di akhir
                 val ingredientsText = recommendation.Ingredients
                     .replace("--", "\n-")
                     .replace(Regex("""-\s*$"""), "")
