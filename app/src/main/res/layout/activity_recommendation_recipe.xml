@@ -7,6 +7,20 @@
     android:background="@color/background_light_pink"
     tools:context=".ui.recommendation.RecommendationRecipeActivity">
 
+    <TextView
+        android:id="@+id/tv_recipe_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/framelayout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Resep yang direkomendasikan :"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <FrameLayout
         android:id="@+id/framelayout"
         android:layout_width="0dp"
@@ -58,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/framelayout"
+        app:layout_constraintTop_toBottomOf="@+id/tv_recipe_recommend"
         app:layout_constraintVertical_bias="0.0"
         app:spanCount="2"
         tools:listitem="@layout/item_recommendation">
