@@ -22,8 +22,17 @@ class RecommendationRecipeAdapter :
         fun bind(recommendation: RecommendationRecipe) {
             binding.apply {
                 tvRecommendationTitle.text = recommendation.Title
-                tvIngredient.text = recommendation.Ingredients
-                tvSteps.text = recommendation.Steps
+
+                // Mengganti "--" dengan "\n-" dan menghilangkan tanda minus ("-") di akhir
+                val ingredientsText = recommendation.Ingredients
+                    .replace("--", "\n-")
+                    .replace(Regex("""-\s*$"""), "")
+                tvIngredient.text = ingredientsText
+
+                val stepsText = recommendation.Steps
+                    .replace("--", "\n\n-")
+                    .replace(Regex("""-\s*$"""), "")
+                tvSteps.text = stepsText
             }
         }
     }
