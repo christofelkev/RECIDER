@@ -131,8 +131,7 @@ class SearchListRecipeActivity : AppCompatActivity() {
         when (category.name) {
             "Semua Resep" -> {
                 // Handle click for "All Recipe"
-                // For example, show all recipes
-                // You may call a method or perform an action to display all recipes
+
                 showAllRecipes()
                 showLoading(false)
             }
@@ -145,26 +144,18 @@ class SearchListRecipeActivity : AppCompatActivity() {
             }
 
             "Sapi" -> {
-                // Handle click for "Ayam"
-                // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Sapi")
             }
 
             "Tempe" -> {
-                // Handle click for "Ayam"
-                // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Tempe")
             }
 
             "Tahu" -> {
-                // Handle click for "Ayam"
-                // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Tahu")
             }
 
             "Telur" -> {
-                // Handle click for "Ayam"
-                // For example, perform a search for recipes related to "Ayam"
                 viewModel.setSearchRecipes("Telur")
             }
             // Add cases for other categories as needed

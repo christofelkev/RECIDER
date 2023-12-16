@@ -39,7 +39,6 @@ class DetailRecipeActivity : AppCompatActivity() {
             val ingredientText = recipeDetail.ingredient.joinToString("\n") { "- $it" }
             binding.tvAboutRecipe.text = ingredientText
 
-            //binding.tvAboutRecipeHow.text = recipeDetail.step.joinToString("\n\n")
             // Menggunakan angka untuk langkah-langkah
             val stepsText = recipeDetail.step.withIndex()
                 .joinToString("\n\n") { (index, step) -> "${index + 1}. $step" }
