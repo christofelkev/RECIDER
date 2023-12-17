@@ -18,7 +18,7 @@ class RecommendationRecipeViewModel : ViewModel() {
     private val _recommendationsRecipe = MutableLiveData<List<RecommendationRecipe>>()
     val recommendationsRecipe: LiveData<List<RecommendationRecipe>> get() = _recommendationsRecipe
 
-    fun setRecommendations(requestBody: String) {
+    fun setRecommendations(requestBody: List<String>) {
         val recommendationRequest = RecommendationRequest(requestBody)
         val recipeApi = ApiConfig.getApiService().create(ApiService::class.java)
         val call: Call<RecommendationResponse> = recipeApi.getRecommendations(recommendationRequest)

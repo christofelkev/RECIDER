@@ -2,6 +2,7 @@ package com.capstone.recider.ui.recommendation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.recider.data.model.RecommendationRecipe
 import com.capstone.recider.databinding.ItemRecommendationBinding

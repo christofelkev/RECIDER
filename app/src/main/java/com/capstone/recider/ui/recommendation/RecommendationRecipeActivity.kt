@@ -71,7 +71,7 @@ class RecommendationRecipeActivity : AppCompatActivity() {
             val query = edQuery.text.toString()
             if (query.isNotEmpty()) {
                 showLoading(true)
-                viewModel.setRecommendations(query)
+                viewModel.setRecommendations(listOf(query))
                 Log.d("query","Query : {$query}")
             }
 

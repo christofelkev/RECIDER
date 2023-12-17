@@ -10,7 +10,7 @@ import retrofit2.http.GET
 import retrofit2.http.POST
 import retrofit2.http.Path
 
-data class RecommendationRequest(val ingredients : String)
+data class RecommendationRequest(val ingredients: List<String>)
 
 interface ApiService {
     @GET("api/searchRecipe/{query}") // Update the search endpoint with the correct path
