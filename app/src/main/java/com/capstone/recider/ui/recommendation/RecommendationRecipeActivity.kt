@@ -23,7 +23,8 @@ class RecommendationRecipeActivity : AppCompatActivity() {
         binding = ActivityRecommendationRecipeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        viewModel = ViewModelProvider(this)[RecommendationRecipeViewModel::class.java]
+        viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory(application))
+            .get(RecommendationRecipeViewModel::class.java)
         adapter = RecommendationRecipeAdapter()
 
 
@@ -59,6 +60,7 @@ class RecommendationRecipeActivity : AppCompatActivity() {
         })
 
 
+
     }
 
     private fun showNoResult() {
@@ -66,13 +68,16 @@ class RecommendationRecipeActivity : AppCompatActivity() {
         showLoading(false)
     }
 
+
     private fun searchRecommendation() {
         binding.apply {
             val query = edQuery.text.toString()
             if (query.isNotEmpty()) {
-                showLoading(true)
-                viewModel.setRecommendations(listOf(query))
-                Log.d("query","Query : {$query}")
+                val ingredientsList = query.split(",").map { it.trim() }
+                viewModel.setRecommendations(ingredientsList)
+                Log.d("query", "Query: $ingredientsList")
+            } else {
+                Toast.makeText(this@RecommendationRecipeActivity,"Bahan makanan tidak dimasukkan",Toast.LENGTH_SHORT).show()
             }
 
         }

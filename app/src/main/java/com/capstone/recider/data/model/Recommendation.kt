@@ -7,5 +7,6 @@ data class RecommendationResponse(
 data class RecommendationRecipe(
     val Ingredients: String,
     val Steps: String,
-    val Title: String
+    val Title: String,
+    val error : String
 )
