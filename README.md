@@ -3,7 +3,7 @@
 This is the Mobile Development Section of this [repo](https://github.com/alwirihad/recider-apps). Written here are information about what this Android Studio project needed and how it works conceptually.
 
 ### App Demo
-![](https://github.com/christofelkev/RECIDER/blob/master/demoappRecider.gif)
+![](https://github.com/alwirihad/recider-apps/blob/main/reciderappdemo.gif)
 
 ## Android Studio Project Overview
 
