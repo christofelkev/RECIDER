@@ -17,12 +17,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-
 class RecommendationRecipeViewModel(application: Application) : AndroidViewModel(application) {
 
     private val _recommendationsRecipe = MutableLiveData<List<RecommendationRecipe>>()
     val recommendationsRecipe: LiveData<List<RecommendationRecipe>> get() = _recommendationsRecipe
-
 
 
     fun setRecommendations(requestBody: List<String>) {
@@ -71,15 +69,19 @@ class RecommendationRecipeViewModel(application: Application) : AndroidViewModel
                 _recommendationsRecipe.value = emptyList()
 
             }
+
             private fun handleRecipeNotFoundError() {
                 // Access the application context directly from the AndroidViewModel
-                Toast.makeText(getApplication(), "Resep makanan tidak ditemukan", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    getApplication(),
+                    "Resep makanan tidak ditemukan",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
 
         })
 
     }
-
 
 
     fun getRecommendationsRecipeData(): LiveData<List<RecommendationRecipe>> {
